@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f8f4eb" />
+    <meta name="description" content="Repostería casera hecha con cariño. Descubre las tortas, queques y kuchenes de Sabores del Sur." />
+    <title>Sabores del Sur — Repostería hecha con cariño</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="announcement-bar">
+      <span class="announcement-dot" aria-hidden="true"></span>
+      Hecho en casa, con ingredientes seleccionados y mucho cariño
+      <span class="announcement-note">Despacho gratis dentro de la comuna</span>
+    </div>
+
+    <header class="site-header">
+      <a class="brand" href="#inicio" aria-label="Sabores del Sur, inicio">
+        <img src="logoPasteleria.png" alt="Logo de Sabores del Sur Pastelería" />
+        <span class="brand-copy"><strong>Sabores del Sur</strong><small>PASTELERÍA CASERA</small></span>
+      </a>
+      <div class="header-actions" id="header-actions">
+        <nav class="main-nav" aria-label="Navegación principal">
+          <a href="#catalogo">Nuestro catálogo</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+        <a class="button button-primary header-order-link" href="https://wa.me/56999361240?text=Hola%2C%20quiero%20hacer%20un%20pedido%20en%20Sabores%20del%20Sur." target="_blank" rel="noreferrer">Hacer pedido <span aria-hidden="true">↗</span></a>
+      </div>
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="header-actions">
+        <span></span><span></span><span></span>
+      </button>
+      <button class="cart-trigger" id="cart-trigger" type="button" aria-label="Abrir tu pedido">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.1 10.2a2 2 0 0 0 2 1.6h8.8a2 2 0 0 0 1.9-1.4L22 8H6M10 20h.01M18 20h.01" /></svg>
+        <span>Mi pedido</span><span class="cart-count" id="cart-count">0</span>
+      </button>
+    </header>
+
+    <main>
+      <section class="hero" id="inicio">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span> Un pedacito de hogar</p>
+          <h1>La vida sabe<br />más dulce <em>en casa.</em></h1>
+          <p class="hero-description">Recetas hechas a mano, sabores de siempre y ese primer trocito que se disfruta sin apuro.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#catalogo">Descubre el catálogo <span aria-hidden="true">↗</span></a>
+            <span class="hero-note"><span class="rating-stars" aria-hidden="true">★★★★★</span><br />Preparado con cariño</span>
+          </div>
+          <div class="hero-stamp"><span>♥</span> Repostería<br />hecha en casa</div>
+        </div>
+        <div class="hero-art">
+          <div class="hero-halo"></div>
+          <div class="hero-image-frame"><img src="assets/productos/producto-04.png" alt="Queque casero de arándanos y limón" /></div>
+          <div class="hero-image-caption"><span>Un favorito de la casa</span><strong>Arándanos & limón</strong></div>
+          <div class="hero-sparkle sparkle-one" aria-hidden="true">✳</div>
+          <div class="hero-sparkle sparkle-two" aria-hidden="true">✳</div>
+        </div>
+        <div class="hero-bottomline"><span>RECETAS CASERAS</span><span>●</span><span>HORNEADAS CON AMOR</span><span>●</span><span>SABORES DEL SUR</span></div>
+      </section>
+
+      <section class="benefit-strip" aria-label="Detalles de nuestros pedidos">
+        <article><span class="benefit-icon">✳</span><div><strong>Hecho a pedido</strong><small>Siempre fresco, siempre casero</small></div></article>
+        <article><span class="benefit-icon">◷</span><div><strong>48 horas de anticipación</strong><small>Para preparar cada detalle</small></div></article>
+        <article><span class="benefit-icon">⌖</span><div><strong>Despacho sin costo</strong><small>Dentro de la comuna</small></div></article>
+      </section>
+
+      <section class="catalog-section section-wrap" id="catalogo">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow"><span class="eyebrow-line"></span> Directo de nuestro horno</p>
+            <h2>Algo rico para <em>compartir.</em></h2>
+          </div>
+          <p class="section-intro">Elige tu próximo favorito.<br />Cada receta está hecha en casa.</p>
+        </div>
+        <div class="catalog-toolbar">
+          <div class="category-filters" role="group" aria-label="Filtrar productos por categoría">
+            <button class="filter-button is-active" type="button" data-filter="todos" aria-pressed="true">Todo el catálogo <span>11</span></button>
+            <button class="filter-button" type="button" data-filter="queques" aria-pressed="false">Queques & kuchenes</button>
+            <button class="filter-button" type="button" data-filter="tartas" aria-pressed="false">Tartas & pies</button>
+            <button class="filter-button" type="button" data-filter="postres" aria-pressed="false">Postres</button>
+          </div>
+          <label class="search-box">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg>
+            <input id="product-search" type="search" placeholder="Buscar un antojo…" aria-label="Buscar productos" />
+          </label>
+        </div>
+        <p class="results-label" id="results-label" aria-live="polite">Nuestras recetas <span>·</span> 11 delicias</p>
+        <div class="product-grid" id="product-grid"></div>
+        <div class="empty-state" id="empty-state" hidden>No encontramos ese antojo. Prueba con otra palabra.</div>
+      </section>
+
+      <section class="order-banner" id="nosotros">
+        <div class="banner-decoration" aria-hidden="true">✳</div>
+        <div class="banner-copy"><p class="eyebrow">Una mesa, muchos recuerdos</p><h2>Los mejores momentos<br />siempre vienen <em>con algo rico.</em></h2><p>Horneamos cada pedido con dedicación, para que compartir sepa todavía mejor.</p></div>
+        <a class="button button-light" href="https://wa.me/56999361240?text=Hola%2C%20quiero%20hacer%20un%20pedido%20en%20Sabores%20del%20Sur." target="_blank" rel="noreferrer">Conversemos por WhatsApp <span aria-hidden="true">↗</span></a>
+      </section>
+
+      <section class="contact-section section-wrap" id="contacto">
+        <div class="contact-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span> Estamos para ayudarte</p>
+          <h2>¿Planeamos algo <em>rico?</em></h2>
+          <p>Escríbenos para hacer tu pedido o resolver cualquier duda. Recuerda encargar con 48 horas de anticipación.</p>
+        </div>
+        <div class="contact-options">
+          <a class="contact-option" href="https://wa.me/56999361240" target="_blank" rel="noreferrer">
+            <span class="contact-option-icon" aria-hidden="true">↗</span>
+            <span class="contact-option-copy"><small>WhatsApp</small><strong>+56 9 9936 1240</strong></span>
+          </a>
+          <a class="contact-option" href="mailto:hola@saboresdelsur.cl">
+            <span class="contact-option-icon" aria-hidden="true">✉</span>
+            <span class="contact-option-copy"><small>Correo electrónico</small><strong>marielaste1@gmail.com</strong></span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="#inicio">
+        <img src="logoPasteleria.png" alt="" />
+        <span class="brand-copy"><strong>Sabores del Sur</strong><small>PASTELERÍA CASERA</small></span>
+      </a>
+      
+      <div class="footer-contact"><span>¿Se te antojó algo?</span><a href="https://wa.me/56999361240" target="_blank" rel="noreferrer">+56 9 9936 1240 <span aria-hidden="true">↗</span></a><a class="footer-email" href="mailto:hola@saboresdelsur.cl">marielaste1@gmail.com</a></div>
+      <small class="footer-legal">© <span id="year"></span> Sabores del Sur. Hecho con cariño.</small>
+    </footer>
+
+    <div class="drawer-scrim" id="drawer-scrim"></div>
+    <aside class="cart-drawer" id="cart-drawer" aria-labelledby="cart-title" aria-hidden="true">
+      <div class="drawer-header"><div><p class="eyebrow">Algo rico viene en camino</p><h2 id="cart-title">Tu pedido</h2></div><button class="icon-button" id="close-cart" type="button" aria-label="Cerrar pedido">×</button></div>
+      <div class="cart-items" id="cart-items"></div>
+      <div class="cart-empty" id="cart-empty"><span>♡</span><p>Tu pedido todavía está vacío.</p><a href="#catalogo" id="browse-catalog">Hay algo rico esperándote</a></div>
+      <div class="drawer-footer" id="drawer-footer" hidden><div class="cart-total"><span>Total</span><strong id="cart-total">$0</strong></div><p>Pedidos con 48 horas de anticipación. Despacho gratis dentro de la comuna.</p><a class="button button-primary whatsapp-checkout" id="checkout-link" href="https://wa.me/56999361240" target="_blank" rel="noreferrer">Pedir por WhatsApp <span aria-hidden="true">↗</span></a></div>
+    </aside>
+    <a class="whatsapp-float" href="https://wa.me/56999361240" target="_blank" rel="noreferrer" aria-label="Escríbenos por WhatsApp" title="Escríbenos por WhatsApp">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 3.8A11.4 11.4 0 0 0 2.3 17.6L1 23l5.5-1.4a11.4 11.4 0 0 0 5.4 1.4h.1A11.5 11.5 0 0 0 20.2 3.8ZM12 21a9.4 9.4 0 0 1-4.8-1.3l-.4-.2-3.2.8.9-3.1-.3-.5A9.5 9.5 0 1 1 12 21Zm5.2-7.1c-.3-.1-1.6-.8-1.9-.9-.3-.1-.5-.1-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.8-.7-1.4-1.6-1.5-1.9-.2-.3 0-.4.1-.6l.4-.5.3-.5c.1-.2 0-.4 0-.5-.1-.1-.7-1.5-.9-2-.2-.5-.5-.4-.7-.4h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.6-.7 1.8-1.3.2-.7.2-1.2.2-1.3-.1-.2-.3-.3-.6-.4Z"/></svg>
+    </a>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
