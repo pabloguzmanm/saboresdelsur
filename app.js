@@ -215,7 +215,7 @@ function renderCart() {
     return product ? `• ${quantity} × ${product.name} — ${money.format(product.price * quantity)}` : '';
   }).filter(Boolean);
   const message = `Hola, quiero hacer este pedido en Sabores del Sur:\n${orderLines.join('\n')}\nTotal: ${money.format(total)}\n\nSé que los pedidos se coordinan con 48 horas de anticipación.`;
-  document.querySelector('#checkout-link').href = `https://wa.me/56999361240?text=${encodeURIComponent(message)}`;
+  document.querySelector('#checkout-link').href = `https://wa.me/56999631240?text=${encodeURIComponent(message)}`;
 }
 
 function setDrawerOpen(isOpen) {
